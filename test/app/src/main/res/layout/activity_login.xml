@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/login_iv"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/cierra" />
+
+    <EditText
+        android:id="@+id/login_user_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:hint="用户名或一卡通号"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/login_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="密码"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/login_ll_check_word"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/login_check_word"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="验证码"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:inputType="textShortMessage"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/login_check_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"
+            android:scaleType="fitStart" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_ll_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/login_tv_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="忘记密码？"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/login_ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/login_tv_no_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="没有账号？"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_ll_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/login_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="登  陆"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

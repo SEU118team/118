@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/pop_im"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/xin"
+        android:layout_gravity="center">
+    </ImageButton>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000">
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/nav_tv_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的失物贴"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:background="#FFF"
+            />
+        <TextView
+            android:id="@+id/nav_tv_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的寻物贴"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:background="#FFF"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000">
+    </View>
+
+    <TextView
+        android:id="@+id/nav_tv_remind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="消息提醒"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="#FFF"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000">
+    </View>
+
+    <TextView
+        android:id="@+id/nac_tv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="浏览记录"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="#FFF"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000">
+    </View>
+
+    <TextView
+        android:id="@+id/nav_tv_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="#FFF"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000">
+    </View>
+
+    <TextView
+        android:id="@+id/nav_tv_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换/注销"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="#FFF"/>
+
+</LinearLayout>

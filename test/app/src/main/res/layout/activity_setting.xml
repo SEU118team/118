@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/setting_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3366CC"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/setting_name"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="Setting"
+            android:textColor="@color/ivory"
+            android:textSize="30sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/setting_1"
+        android:orientation="vertical"
+        android:divider="@drawable/setting_fenge"
+        android:showDividers="middle"
+        >
+        <Button
+            android:id="@+id/setting_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_1"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:text="主题色"
+            android:textSize="30dp"
+            />
+        <Button
+            android:id="@+id/setting_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_color"
+
+            android:background="@color/white"
+            android:text="关于"
+            android:textSize="30dp"
+            />
+        <Button
+            android:id="@+id/setting_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_about"
+
+
+            android:background="@color/white"
+            android:text="字号"
+            android:textSize="30dp"
+            />
+        <Button
+            android:id="@+id/setting_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting_size"
+
+            android:background="@color/white"
+            android:text="清理缓存"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
+
+
+    >
+</RelativeLayout>

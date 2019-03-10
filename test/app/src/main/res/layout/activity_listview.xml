@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/Navigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/person_50"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/QR"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="250dp"
+            android:src="@drawable/sao_50"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/gongneng"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/jia_50"></ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/bu_fra_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="失物" />
+
+        <Button
+            android:id="@+id/bu_fra_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="寻主" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fra_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

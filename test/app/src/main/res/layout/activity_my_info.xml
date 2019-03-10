@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--头像-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/photo"
+        android:background="@color/colorPrimary"/>
+
+    <!--昵称-->
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/ll_name">
+
+     <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="昵称"
+        android:textSize="20dp"
+        android:id="@+id/tv_name"/>
+     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/et_name"
+        android:background="@drawable/fatie_selector_edit"
+        android:maxLength="20"
+        android:singleLine="true"/>
+     </LinearLayout>
+
+    <!--手机号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_phoneNumber">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="手机"
+            android:textSize="20dp"
+            android:id="@+id/tv_phoneNumber"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/et_phoneNumber"
+            android:background="@drawable/fatie_selector_edit"
+            android:maxLength="20"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <!--qq-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_qq">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="QQ"
+            android:textSize="20dp"
+            android:id="@+id/tv_qq"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/et_qq"
+            android:background="@drawable/fatie_selector_edit"
+            android:maxLength="20"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <!--Email-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_Email">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20dp"
+            android:id="@+id/tv_Email"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/et_Email"
+            android:background="@drawable/fatie_selector_edit"
+            android:maxLength="20"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey">
+    </View>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改密码"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/tv_changePsw"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey">
+    </View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的二维码"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/tv_myCode"/>
+
+</LinearLayout>
