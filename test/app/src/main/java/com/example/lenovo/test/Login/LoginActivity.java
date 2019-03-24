@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.example.lenovo.test.R;
 import com.example.lenovo.test.listview.ListViewActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity{
 
     private Button mBt_login;
 
@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mBt_login=findViewById(R.id.login_login);
+
         mBt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,4 +27,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }
