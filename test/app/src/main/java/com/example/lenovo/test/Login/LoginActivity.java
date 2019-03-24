@@ -11,7 +11,7 @@ import com.example.lenovo.test.SettingActivity;
 import com.example.lenovo.test.SocketActivity;
 import com.example.lenovo.test.listview.ListViewActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity{
 
     private Button mBt_login;
     private Button mBt_socket;
@@ -37,4 +37,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }
