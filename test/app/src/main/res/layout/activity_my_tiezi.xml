@@ -65,7 +65,7 @@
                 android:layout_marginLeft="15dp"
                 android:text="已选择"
                 android:textColor="#1A1A1A"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/tv_select_num"
@@ -76,7 +76,7 @@
                 android:layout_toRightOf="@+id/tv"
                 android:text="0"
                 android:textColor="#1A1A1A"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
             <Button
                 android:id="@+id/btn_delete"
@@ -89,12 +89,12 @@
                 android:gravity="center"
                 android:text="删除"
                 android:textColor="#b7b8bd"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/tv_select_all"
                 android:layout_width="80dp"
-                android:layout_height="wrap_content"
+                android:layout_height="33dp"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
                 android:layout_toLeftOf="@+id/btn_delete"
@@ -102,7 +102,7 @@
                 android:gravity="center"
                 android:text="全选"
                 android:textColor="#000001"
-                android:textSize="14sp" />
+                android:textSize="14sp"/>
 
         </RelativeLayout>
     </LinearLayout>

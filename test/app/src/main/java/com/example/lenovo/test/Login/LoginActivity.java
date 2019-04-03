@@ -8,10 +8,9 @@ import android.widget.Button;
 
 import com.example.lenovo.test.R;
 import com.example.lenovo.test.SettingActivity;
-import com.example.lenovo.test.SocketActivity;
 import com.example.lenovo.test.listview.ListViewActivity;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity {
 
     private Button mBt_login;
     private Button mBt_socket;
@@ -21,7 +20,6 @@ public class LoginActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mBt_login=findViewById(R.id.login_login);
-        mBt_socket=findViewById(R.id.login_test_socket);
         mBt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,13 +27,6 @@ public class LoginActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-        mBt_socket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,SocketActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
 
+    }
 }

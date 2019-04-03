@@ -171,6 +171,7 @@ public class ListViewActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         popwindow2.dismiss();
                         //do
+                        //Toast.makeText(ListViewActivity.this,"2test1",Toast.LENGTH_SHORT).show();
                         AndPermission.with(ListViewActivity.this)
                                 .permission(Permission.CAMERA, Permission.READ_EXTERNAL_STORAGE)
                                 .onGranted(new Action() {
