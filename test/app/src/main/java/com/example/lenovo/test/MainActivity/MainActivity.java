@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lenovo.test.Login.LoginActivity;
 import com.example.lenovo.test.MyTieziActivity;
 import com.example.lenovo.test.R;
 import com.example.lenovo.test.SettingActivity;
@@ -38,6 +39,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    public static MainActivity instance;
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance=this;
         setContentView(R.layout.activity_main);
 
         //toolbar
@@ -205,8 +208,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "切换/注销", Toast.LENGTH_SHORT).show();
-                //Intent intent=new Intent(toolActivity.this,explainActivity.class);
-                //startActivity(intent);
+                //清理用户信息
+                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+                MainActivity.instance.finish();
             }
         });
 
