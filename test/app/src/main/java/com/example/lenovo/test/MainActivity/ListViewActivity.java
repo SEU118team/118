@@ -1,4 +1,4 @@
-package com.example.lenovo.test.listview;
+package com.example.lenovo.test.MainActivity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -23,7 +23,6 @@ import com.example.lenovo.test.fatie.MyInfoActivity;
 import com.example.lenovo.test.fatie.PostActivity;
 import com.example.lenovo.test.fragment.Afragment;
 import com.example.lenovo.test.fragment.Bfragment;
-import com.example.lenovo.test.util.MytieziAdapter;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;

@@ -1,7 +1,6 @@
-package com.example.lenovo.test.listview;
+package com.example.lenovo.test.MainActivity;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +10,12 @@ import android.widget.TextView;
 
 import com.example.lenovo.test.R;
 
-public class MyListAdapter extends BaseAdapter {
+public class MyListAdapter2 extends BaseAdapter {
 
     private Context mcontext;
     private LayoutInflater minflater;
 
-    public MyListAdapter(Context context) {
+    public MyListAdapter2(Context context) {
         this.mcontext = context;
         minflater=LayoutInflater.from(context);
     }
@@ -59,7 +58,7 @@ public class MyListAdapter extends BaseAdapter {
             holder=(ViewHoder) convertView.getTag();
         }
         //fuzhi
-        holder.te_1.setText("这是一个失物帖子");
+        holder.te_1.setText("这是一个寻主帖子");
         //holder.im.setImageDrawable(Drawable.createFromPath("@drawable/person.png"));
         return convertView;
     }

@@ -13,8 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lenovo.test.R;
-import com.example.lenovo.test.listview.MyListAdapter;
-import com.example.lenovo.test.listview.MyListAdapter2;
+import com.example.lenovo.test.MainActivity.MyListAdapter2;
 
 public class Bfragment extends Fragment {
 
@@ -31,7 +30,7 @@ public class Bfragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        b_te=view.findViewById(R.id.b_fra_text);
+        //b_te=view.findViewById(R.id.b_fra_text);
 
         lv1=view.findViewById(R.id.b_list);
         lv1.setAdapter(new MyListAdapter2(this.getActivity()));

@@ -13,8 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lenovo.test.R;
-import com.example.lenovo.test.listview.ListViewActivity;
-import com.example.lenovo.test.listview.MyListAdapter;
+import com.example.lenovo.test.MainActivity.MyListAdapter;
 
 public class Afragment extends Fragment {
 
@@ -31,7 +30,7 @@ public class Afragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        a_te=view.findViewById(R.id.a_fra_text);
+        //a_te=view.findViewById(R.id.a_fra_text);
         lv1=view.findViewById(R.id.a_list);
         lv1.setAdapter(new MyListAdapter(this.getActivity()));
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
