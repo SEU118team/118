@@ -30,12 +30,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".Login.RegisterActivity" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".TieZiActivity" />
         <activity android:name=".MyTieziActivity" />
         <activity android:name=".MainActivity.MainActivity">
+
+        </activity>
+        <activity android:name=".sousuo.SearchDemo">
 
         </activity>
     </application>

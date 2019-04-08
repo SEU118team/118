@@ -28,6 +28,7 @@ import com.example.lenovo.test.fatie.MyInfoActivity;
 import com.example.lenovo.test.fatie.PostActivity;
 import com.example.lenovo.test.fragment.Afragment;
 import com.example.lenovo.test.fragment.Bfragment;
+import com.example.lenovo.test.sousuo.SearchDemo;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -188,8 +189,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "浏览记录", Toast.LENGTH_SHORT).show();
-                //Intent intent=new Intent(toolActivity.this,explainActivity.class);
-                //startActivity(intent);
+                Intent intent=new Intent(MainActivity.this,MyTieziActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -292,10 +293,11 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.toolbar_action1:
                     msg += "搜索";
+                    startActivity(new Intent(MainActivity.this,SearchDemo.class));
                     break;
                 case R.id.toolbar_action2:
                     msg += "发帖";
-                Intent intent=new Intent(MainActivity.this,PostActivity.class);
+                    Intent intent=new Intent(MainActivity.this,PostActivity.class);
                     startActivity(intent);
                     break;
             }
