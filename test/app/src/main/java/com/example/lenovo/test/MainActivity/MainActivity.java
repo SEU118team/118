@@ -29,6 +29,7 @@ import com.example.lenovo.test.fatie.PostActivity;
 import com.example.lenovo.test.fragment.Afragment;
 import com.example.lenovo.test.fragment.Bfragment;
 import com.example.lenovo.test.sousuo.SearchDemo;
+import com.example.lenovo.test.util.ToastUtil;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView my_tx4;
     private TextView my_tx5;
     private TextView my_tx6;
+
+    private long mExitTime = System.currentTimeMillis();  //为当前系统时间，单位：毫秒
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -308,5 +311,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    /*
+    双击返回键退出应用
+     */
+    @Override
+    public void onBackPressed() {
+        if(System.currentTimeMillis() - mExitTime < 800) {
+            MainActivity.this.finish();   //关闭本活动页面
+        }
+        else{
+            ToastUtil.showMSg(MainActivity.this,"再按返回键退出！");
+            mExitTime = System.currentTimeMillis();   //这里赋值最关键，别忘记
+        }
+    }
     }
 
