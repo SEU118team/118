@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private LinearLayout left;
 
-    private ImageView my_im;
+    private com.makeramen.roundedimageview.RoundedImageView zuobianlan_touxiang;
 
     private TextView my_tx1;
     private TextView my_tx2;
@@ -147,8 +147,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //左边栏点击事件
-        my_im=findViewById(R.id.im);
-        my_im.setOnClickListener(new View.OnClickListener() {
+        zuobianlan_touxiang=findViewById(R.id.zuobianlan_touxiang);
+        zuobianlan_touxiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "个人信息", Toast.LENGTH_SHORT).show();
