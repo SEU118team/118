@@ -1,8 +1,14 @@
 package com.example.lenovo.test.MainActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -60,11 +66,66 @@ public class MainActivity extends AppCompatActivity {
 
     private long mExitTime = System.currentTimeMillis();  //为当前系统时间，单位：毫秒
 
+    //yyy-------
+    private TextView yyy;
+    int ringValue = 40;
+    boolean flag = false;
+    //----------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         instance=this;
         setContentView(R.layout.activity_main);
+
+        //彩蛋摇一摇---------------------------------
+        yyy=findViewById(R.id.yyy);
+
+        // 获取 系统传感器管理器
+        SensorManager sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        // 通过传感器管理器 获取 本地所有的传感器
+        List<Sensor> sensors = sm.getSensorList(Sensor.TYPE_ALL);
+
+        for (Sensor s : sensors) {
+            System.out.println("Sensor == " + s.toString());
+        }
+
+        // 获取指定的某一个传感器
+        Sensor type_accelerometer = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        if (type_accelerometer != null) {
+            System.out.println("Sensor 获取指定的某一个传感器 " + type_accelerometer.toString());
+        }
+
+        // 注册传感器的监听器 （摇一摇）
+        sm.registerListener(new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                // 传感器数据变化，在该方法中我们可以获取传感器变化的值
+                float x = sensorEvent.values[0];
+                float y = sensorEvent.values[1];
+                float z = sensorEvent.values[2];
+
+                if (Math.abs(x) + Math.abs(y) + Math.abs(z) >= ringValue && flag == false) {
+                    flag = true;
+                    yyy.setVisibility(View.VISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            //do something
+                            yyy.setVisibility(View.GONE);
+                            flag=false;
+                        }
+                    }, 2000);
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
+                // 传感器精度的变化
+            }
+        }, type_accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+
+        //-------------------------------------------
 
         //toolbar
         //此处final是为了tablayout可以修改
